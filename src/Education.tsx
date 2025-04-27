@@ -17,7 +17,7 @@ export default function Education() {
           paddingRight: "3.5rem",
           backgroundColor: "var(--color-primary)",
           boxShadow:
-            "var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)",
+            "var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)"
         }}
         className="inset-shadow-primary_darker inset-shadow-sm"
       >
@@ -26,7 +26,7 @@ export default function Education() {
           aria-controls="panel1-content"
           id="panel1-header"
           sx={{
-            zIndex: 0,
+            zIndex: 0
           }}
         >
           <Typography
@@ -35,7 +35,7 @@ export default function Education() {
             sx={{
               fontSize: "2.5rem",
               fontWeight: "var(--font-weight-semibold)",
-              paddingY: "0",
+              paddingY: "0"
             }}
           >
             <h1>Education </h1>
@@ -45,19 +45,15 @@ export default function Education() {
           <Typography className="px-14 pb-10">
             <div className="flex w-full items-center gap-[15%] text-black">
               <ul className="text-2xl max-w-1/2">
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni,</li>
                 <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Magni,
-                </li>
-                <li>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
-                  sint eaque, porro rem saepe nemo nam pariatur tempore omnis.
-                  Sit.
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio sint eaque, porro
+                  rem saepe nemo nam pariatur tempore omnis. Sit.
                 </li>
                 <li>Lorem, ipsum dolor.</li>
                 <li>
-                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius
-                  velit ipsa at autem a quis veritatis.
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius velit ipsa at autem
+                  a quis veritatis.
                 </li>
               </ul>
               <div className="border-accent border-8 rounded-full w-72 h-72 animate-[shadow_12s_linear_infinite]">

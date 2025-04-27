@@ -1,35 +1,47 @@
-import {
-  motion,
-  useMotionValueEvent,
-  useScroll,
-  useSpring,
-  useVelocity,
-} from "motion/react";
+import { motion, useMotionValueEvent, useScroll, useSpring, useVelocity } from "motion/react";
 import { GithubOutlined, LinkedinOutlined } from "@ant-design/icons";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 export default function Footer() {
-  const { scrollY } = useScroll();
+  const { scrollY, scrollYProgress } = useScroll();
+  const [, setScroll] = useState(0);
   const velocity = useVelocity(scrollY);
-  const [isDark, setIsDark] = useState(true);
+  const [isDark, setIsDark] = useState(false);
   useMotionValueEvent(velocity, "change", (latestValue) => {
-    console.log(-latestValue / 200);
-    translateY.set(Math.min(Math.max(-latestValue / 200, -30), 30));
-  });
-  const translateY = useSpring(velocity, {
-    stiffness: 100,
-    damping: 30,
-    restDelta: 0.001,
+    translateY.set(-latestValue / 200);
   });
 
+  useMotionValueEvent(scrollYProgress, "change", (latestValue) => {
+    setScroll(latestValue);
+  });
+  const translateY = useSpring(velocity, {
+    stiffness: 3000,
+    damping: 100,
+    restDelta: 0.0001
+  });
+  useEffect(() => {
+    const app = document.getElementById("app");
+    if (isDark) {
+      app?.classList.add("dark");
+      app?.classList.remove("light");
+    } else {
+      app?.classList.add("light");
+      app?.classList.remove("dark");
+    }
+  }, [isDark]);
   return (
     <>
       <footer
-        className={`fixed w-full flex justify-center duration-200 bottom-5  `}
+        className={`fixed w-full flex justify-center duration-200 delay-200 z-100  ${
+          scrollYProgress.get() == 1 ? "bottom-0 bg-primary_darker" : "bottom-5"
+        }`}
       >
         <motion.span
-          className="border border-black rounded-full w-max p-2 bg-primary/30 backdrop-blur-xs flex gap-2 text-2xl text-black"
+          className={` ${
+            scrollYProgress.get() == 1 ? "w-full border-t" : "w-max rounded-full border"
+          } p-2 bg-primary/30 backdrop-blur-xs flex gap-2 text-2xl justify-center text-black duration-200 border-black `}
           style={{ translateY }}
         >
+          Hieu Nguyen |
           <button
             onClick={() => setIsDark(!isDark)}
             aria-label="Dark mode toggle"
@@ -37,7 +49,6 @@ export default function Footer() {
           >
             {isDark ? "🌙" : "🔆"}
           </button>
-          Hieu Nguyen |
           <GithubOutlined />
           <LinkedinOutlined />
         </motion.span>

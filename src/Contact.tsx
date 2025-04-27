@@ -11,7 +11,7 @@ export default function Contact() {
 
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
-      body: formData,
+      body: formData
     });
 
     const data = await response.json();
@@ -31,7 +31,7 @@ export default function Contact() {
 
   return (
     <div
-      className="w-full min-h-screen flex justify-start items-center px-14 border-t-2 border-primary_darker"
+      className="w-full min-h-screen flex justify-start items-center px-14 border-t-2 border-primary_darker text-black"
       id="contact"
     >
       <div className="w-[calc(100vw-6.8rem)] h-[calc(100vh-5rem)] rounded-lg p-0 cursor-default z-0 flex justify-start items-center">
@@ -40,7 +40,7 @@ export default function Contact() {
             onSubmit(e.currentTarget);
           }}
           ref={form}
-          className="flex flex-col gap-5 w-full h-full py-[1rem] max-w-[500px] text-paragraph "
+          className="flex flex-col gap-5 w-full h-full py-[1rem] max-w-[500px] text-black "
         >
           <h1 className="m-0">Contact me</h1>
           <input
@@ -63,7 +63,7 @@ export default function Contact() {
             required
             className="h-full rounded-lg bg-[transparent] border-accent border-2 p-2"
           ></textarea>
-          {result && <span className="text-paragraph">{result}</span>}
+          {result && <span className="text-black">{result}</span>}
           <button
             type="submit"
             className="border border-green rounded-lg py-2 bg-secondary text-white  hover:opacity-80 cursor-pointer duration-200"

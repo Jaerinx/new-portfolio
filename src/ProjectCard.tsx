@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 export default function ProjectCard({ children }: { children?: ReactNode }) {
   return (
     <>
-      <div className="relative w-fit h-fit group">
+      <div className="relative w-fit h-fit group text-xl">
         <div className="w-[40vw] h-max rounded-2xl  z-1 invisible">
           <div className="w-full p-5 overflow-hidden">{children}</div>
         </div>

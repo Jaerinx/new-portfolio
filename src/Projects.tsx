@@ -10,40 +10,28 @@ import { TimelineOppositeContent } from "@mui/lab";
 
 export default function Projects() {
   return (
-    <div
-      className="px-14 w-full shadow-2xl shadow-primary_darker pb-20"
-      id="projects"
-    >
+    <div className="px-14 w-full shadow-2xl shadow-primary_darker pb-20" id="projects">
       <h1 className="ml-auto mr-auto w-fit mt-10 text-accent">Projects</h1>
       <Timeline position="alternate-reverse">
         <TimelineItem>
-          <TimelineOppositeContent className="opacity-50">
-            2020
-          </TimelineOppositeContent>
+          <TimelineOppositeContent className="opacity-50">2020</TimelineOppositeContent>
           <TimelineSeparator>
-            <TimelineDot
-              variant="filled"
-              sx={{ backgroundColor: "var(--color-accent)" }}
-            />
-            <TimelineConnector
-              sx={{ backgroundColor: "var(--color-primary_darker)" }}
-            />
+            <TimelineDot variant="filled" sx={{ backgroundColor: "var(--color-accent)" }} />
+            <TimelineConnector sx={{ backgroundColor: "var(--color-primary_darker)" }} />
           </TimelineSeparator>
           <TimelineContent>
             <ProjectCard>
               <h2>Hello</h2>
               <p className="w-2/3 text-wrap float-start">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas
-                <ul>
+                <ul className="">
                   <li>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Dolorem, incidunt!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, incidunt!
                   </li>
                   <li>Lorem ipsum dolor sit amet.</li>
                   <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
                   <li>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Dolorem, incidunt!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, incidunt!
                   </li>
                   <li>Lorem ipsum dolor sit amet.</li>
                   <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
@@ -59,13 +47,8 @@ export default function Projects() {
         </TimelineItem>
         <TimelineItem>
           <TimelineSeparator>
-            <TimelineDot
-              variant="filled"
-              sx={{ backgroundColor: "var(--color-accent)" }}
-            />
-            <TimelineConnector
-              sx={{ backgroundColor: "var(--color-primary_darker)" }}
-            />
+            <TimelineDot variant="filled" sx={{ backgroundColor: "var(--color-accent)" }} />
+            <TimelineConnector sx={{ backgroundColor: "var(--color-primary_darker)" }} />
           </TimelineSeparator>
           <TimelineContent sx={{ transform: "translateX(2.5rem)" }}>
             <ProjectCard>
@@ -74,8 +57,7 @@ export default function Projects() {
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas
                 <ul>
                   <li>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Dolorem, incidunt!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, incidunt!
                   </li>
                   <li>Lorem ipsum dolor sit amet.</li>
                   <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
@@ -91,13 +73,8 @@ export default function Projects() {
         </TimelineItem>
         <TimelineItem>
           <TimelineSeparator>
-            <TimelineDot
-              variant="filled"
-              sx={{ backgroundColor: "var(--color-accent)" }}
-            />
-            <TimelineConnector
-              sx={{ backgroundColor: "var(--color-primary_darker)" }}
-            />
+            <TimelineDot variant="filled" sx={{ backgroundColor: "var(--color-accent)" }} />
+            <TimelineConnector sx={{ backgroundColor: "var(--color-primary_darker)" }} />
           </TimelineSeparator>
           <TimelineContent>
             <ProjectCard>
@@ -106,8 +83,7 @@ export default function Projects() {
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas
                 <ul>
                   <li>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Dolorem, incidunt!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, incidunt!
                   </li>
                   <li>Lorem ipsum dolor sit amet.</li>
                   <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
@@ -123,10 +99,7 @@ export default function Projects() {
         </TimelineItem>
         <TimelineItem>
           <TimelineSeparator>
-            <TimelineDot
-              variant="filled"
-              sx={{ backgroundColor: "var(--color-accent)" }}
-            />
+            <TimelineDot variant="filled" sx={{ backgroundColor: "var(--color-accent)" }} />
           </TimelineSeparator>
           <TimelineContent sx={{ transform: "translateX(2.5rem)" }}>
             <ProjectCard>
@@ -135,8 +108,7 @@ export default function Projects() {
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas
                 <ul>
                   <li>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Dolorem, incidunt!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, incidunt!
                   </li>
                   <li>Lorem ipsum dolor sit amet.</li>
                   <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
