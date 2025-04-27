@@ -1,6 +1,8 @@
 @import "tailwindcss";
 *{
   font-family: "DM Mono", monospace;
+  scroll-behavior: smooth;
+  scroll-margin: 7rem;
 }
 :root{
 
@@ -18,4 +20,30 @@ h1{
   color: var(--color-accent);
   font-size:2.5rem;
   font-weight: var(--font-weight-semibold);
+  
+}
+
+@keyframes shadow {
+  0%{
+    box-shadow: 0 10px 50px 0 color-mix(in oklab, var(--color-secondary) /* #7FA97F = #7fa97f */ var(--tw-shadow-alpha), transparent), inset 0 10px 50px 0 color-mix(in oklab, var(--color-accent) /* #7FA97F = #7fa97f */ var(--tw-shadow-alpha), transparent);
+    transform: scale(1);
+   
+  }
+  25%{
+    box-shadow: 10px 0 50px -10px color-mix(in oklab, var(--color-secondary) /* #7FA97F = #7fa97f */ var(--tw-shadow-alpha), transparent), inset 10px 0 50px -10px color-mix(in oklab, var(--color-accent) /* #7FA97F = #7fa97f */ var(--tw-shadow-alpha), transparent);
+    transform: scale(1.005)
+  }
+  50%{
+    box-shadow: 0 10px 50px 0 color-mix(in oklab, var(--color-accent) /* #7FA97F = #7fa97f */ var(--tw-shadow-alpha), transparent), inset 0 10px 50px 0 color-mix(in oklab, var(--color-secondary) /* #7FA97F = #7fa97f */ var(--tw-shadow-alpha), transparent);
+    transform: scale(1);
+  }
+  75%{
+    box-shadow: 10px 0 50px -10px color-mix(in oklab, var(--color-accent) /* #7FA97F = #7fa97f */ var(--tw-shadow-alpha), transparent), inset 10px 0 50px -10px color-mix(in oklab, var(--color-secondary) /* #7FA97F = #7fa97f */ var(--tw-shadow-alpha), transparent);
+    transform: scale(1.005)
+  }
+  100%{
+    box-shadow: 0 10px 50px 0 color-mix(in oklab, var(--color-secondary) /* #7FA97F = #7fa97f */ var(--tw-shadow-alpha), transparent), inset 0 10px 50px 0 color-mix(in oklab, var(--color-accent) /* #7FA97F = #7fa97f */ var(--tw-shadow-alpha), transparent);
+    transform: scale(1);
+  }
+  
 }

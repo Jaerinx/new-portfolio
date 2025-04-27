@@ -4,46 +4,41 @@ import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
-export default function Education() {
+export default function Experience() {
   return (
-    <div className="border-t border-t-primary_darker " id="education">
+    <div className=" shadow-primary_darker shadow-md " id="experience">
       <Accordion
         defaultExpanded
         disableGutters
         sx={{
           fontFamily: "var(--font-mono)",
-          margin: "auto",
-          zIndex: "inherit",
-          paddingRight: "3.5rem",
           backgroundColor: "var(--color-primary)",
-          boxShadow:
-            "var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)",
+          margin: "auto",
+          boxShadow: "none",
+          paddingRight: "3.5rem",
         }}
-        className="inset-shadow-primary_darker inset-shadow-sm"
       >
         <AccordionSummary
           expandIcon={<ExpandMoreIcon className="scale-200" />}
           aria-controls="panel1-content"
           id="panel1-header"
-          sx={{
-            zIndex: 0,
-          }}
         >
           <Typography
             component="span"
-            className="px-10 py-0 text-accent font-bold font-mono "
+            className="px-10 py-0 text-accent font-bold font-mono"
             sx={{
               fontSize: "2.5rem",
               fontWeight: "var(--font-weight-semibold)",
               paddingY: "0",
             }}
           >
-            <h1>Education </h1>
+            <h1>Experience</h1>
           </Typography>
         </AccordionSummary>
         <AccordionDetails sx={{ backgroundColor: "var(--color-primary)" }}>
           <Typography className="px-14 pb-10">
             <div className="flex w-full items-center gap-[15%]">
+              <div className="border-accent border-8 rounded-full w-72 h-72 animate-[shadow_12s_linear_infinite]"></div>
               <ul className="text-2xl list-disc list-inside max-w-1/2">
                 <li>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -60,7 +55,6 @@ export default function Education() {
                   velit ipsa at autem a quis veritatis.
                 </li>
               </ul>
-              <div className="border-accent border-8 rounded-full w-72 h-72 animate-[shadow_12s_linear_infinite]"></div>
             </div>
           </Typography>
         </AccordionDetails>
