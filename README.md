@@ -1,54 +1,60 @@
-# React + TypeScript + Vite
+# Repository for the development my new personal portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+- Designed with Figma
+- Built with React.js, Typescript, Tailwindcss and MUI components
 
-Currently, two official plugins are available:
+## Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Technology
 
-## Expanding the ESLint configuration
+- Node.js (v20 or later recommended)
+- Text/Code editor
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Installation
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+1. Clone the repo with `git clone https://github.com/Jaerinx/new-portfolio`
+2. Open the repo in your preferred code editor
+3. Run `npm install` to install dependencies
+4. Run `npm run dev` to start the development server
+
+## Folder Structure
+
+```(batch)
+ ┣ 📂public
+ ┣ 📂src
+ ┃ ┣ 📜App.tsx
+ ┃ ┣ 📜Education.tsx
+ ┃ ┣ 📜Home.tsx
+ ┃ ┣ 📜index.css
+ ┃ ┣ 📜main.tsx
+ ┃ ┣ 📜Navbar.tsx
+ ┃ ┣ 📜ProjectCard.tsx
+ ┃ ┣ 📜ProjectsExperience.tsx
+ ┃ ┗ 📜vite-env.d.ts
+ ┣ 📜.gitignore
+ ┣ 📜eslint.config.js
+ ┣ 📜index.html
+ ┣ 📜package-lock.json
+ ┣ 📜package.json
+ ┣ 📜README.md
+ ┣ 📜tsconfig.app.json
+ ┣ 📜tsconfig.json
+ ┣ 📜tsconfig.node.json
+ ┗ 📜vite.config.ts
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Dependencies
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+The dependencies listed below are the main important ones to understand the project workflow along with the folder structure. Other packages are also used so this list is by no means exhaustive. Please check `package.json` for the actual list of dependencies
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- [Vite](https://vite.dev/guide/) - Build Tool
+- [React](https://react.dev/reference/react) - Frontend Framework
+- [React Router](https://reactrouter.com/home) - Routing
+- [Tailwind CSS (v4.0+)](https://tailwindcss.com/docs/font-size) - CSS Framework
+
+---
+
+Contributors: [Hieu Nguyen](https://github.com/Jaerinx),
+Last Edited: 26.04.25
+
+---
