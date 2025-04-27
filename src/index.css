@@ -4,23 +4,53 @@
   scroll-behavior: smooth;
   scroll-margin: 7rem;
 }
-:root{
 
+@layer base {
+  :root .light{
+    --color-black: #000000;
+    --color-primary: #E6E2D3;
+    --color-primary_darker: #D4CBB8;
+    --color-secondary: #7FA97F;
+    --color-accent: #3D7F7B;
+    --color-tertiary: #B22222;
+  }
+    :root .dark{
+      --color-black: #D3CEC4;
+      --color-primary: #2B1B30;
+      --color-primary_darker: #0B0C10;
+      --color-accent: #4CA2A3;
+      --color-secondary: #9B5DE5;
+      --color-tertiary: #FF4D5D;
+    }
   
 }
 
 @theme{
-  --color-primary: #E6E2D3;
-  --color-primary_darker: #D4CBB8;
-  --color-secondary: #7FA97F;
-  --color-accent: #3D7F7B;
+  --color-primary: var(--color-primary);
+  --color-primary_darker: var(--color-primary_darker);
+  --color-secondary: var(--color-secondary);
+  --color-accent: var(--color-accent);
+  --color-tertiary: var(--color-tertiary)
 
+}
+ul{
+  list-style-type: disc;
+  list-style-position: inside;
+  
+}
+li::marker{
+  color: var(--color-tertiary);
 }
 h1{
   color: var(--color-accent);
   font-size:2.5rem;
   font-weight: var(--font-weight-semibold);
   
+}
+h2{
+  color: var(--color-black);
+  font-size:1.5rem;
+  font-weight: var(--font-weight-semibold); 
 }
 
 @keyframes shadow {
